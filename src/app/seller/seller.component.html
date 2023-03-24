@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+            <div class="card" *ngIf="!showData">
+                <h2 class="card-header bg-danger">Seller Sign-Up</h2>
+                <div class="card-body">
+                    <form action="" [formGroup]="rajbinde">
+
+                        <div class="Form-Group">
+                            <input type="email" class="form-control" name="name" formControlName="name"
+                                placeholder="Name">
+                        </div> <br>
+                        <div class="Form-Group">
+
+                            <input type="email" class="form-control" name="email" formControlName="email"
+                                placeholder="Email">
+                        </div> <br>
+                        <div class="Form-Group">
+                            <input type="password" class="form-control" formControlName="pwd" name="pwd"
+                                placeholder=" Password">
+                        </div> <br>
+                        <button type="submit" class="form-control btn btn-info mt-3">Login</button>
+
+                        <div class="d-flex justify-content-between mt-1">
+
+                            <a class="a" (click)="ShowLogin()">Already Have Account ? <br> <span>Click To
+                                    Login</span></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <br>
+////////////////////////////////////////////////// 
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-4" *ngIf="showData">
+            <form action="" [formGroup]="ashtama">
+                <h2 class="row justify-content-center">Seller Sign-In </h2>
+
+                <div class="Form-Group">
+
+                    <input type="email" class="form-control" name="email" formControlName="email" placeholder="Email">
+                </div> <br>
+                <div class="Form-Group">
+
+                    <input type="password" class="form-control" formControlName="pwd" name="pwd"
+                        placeholder=" Password">
+                </div> <br>
+                <button type="submit" class="form-control btn btn-success mt-3" (click)="OpenSign()">
+                    SignUp
+                </button>
+                <a href="">Don't have account? Click to sign-up</a>
+            </form>
+        </div>
+    </div>
+</div>
